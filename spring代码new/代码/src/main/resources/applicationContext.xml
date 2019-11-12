@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.2.xsd
+   ">
+    <!--扫描包 将我们包中所有的注解类 全部加入到我们的容器当中  我们只需要通过注解调用就可以从容器当中获取对应的对象-->
+    <context:component-scan base-package="com.jbit"></context:component-scan>
+   <aop:aspectj-autoproxy></aop:aspectj-autoproxy>
+   <!-- <bean id="user" class="com.jbit.pojo.User"> -->
+        <!--这个是根据set方法注入-->
+     <!--  <property name="name" value="张三"></property>
+        <property name="age" value="14"></property> -->
+        <!--根据有参实现注入
+        每个属性都要写 不然会报错
+        -->
+    <!--    <constructor-arg name="name" value="杜豪"></constructor-arg>
+        <constructor-arg name="age" value="13" ></constructor-arg>
+        <constructor-arg name="shuo" value="三天不打鬼子，手痒痒" ></constructor-arg>
+    </bean> -->
+
+    <!--注：使用基本数据类型，p注解没有ref
+      如果是引用数据类型，p注解有ref
+    -->
+
+ <!--   <bean id="user" class="com.jbit.pojo.User" p:age="19" p:name="杜豪" p:shuo="我最聪明！" >
+        <property name="arrays" >
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+        <property name="lists">
+            <list>
+                <value>1</value>
+                <value>2</value>
+                <value>3</value>
+            </list>
+        </property>
+<property name="sets">
+    <set>
+        <value>张三</value>
+        <value>李四</value>
+        <value>王五</value>
+    </set>
+</property>
+
+        <property name="map">
+            <map>
+                <entry key="CN" value="中华人民共和国"></entry>
+                <entry key="DH" value="杜豪"></entry>
+            </map>
+        </property>
+
+        <property name="properties">  -->
+            <!-- 可能将来使用的比较多 读取配置文件的时候-->
+      <!--      <props>
+                <prop key="url">www.baidu.com</prop>
+            </props>
+        </property>
+    </bean>  -->
+    <bean id="userservice" class="com.jbit.service.UserService"></bean>
+</beans>

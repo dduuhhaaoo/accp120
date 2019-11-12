@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c33bb736-5d89-49a4-8091-1dcb9e96de04" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Unnamed">
+      <favorite_root url="file://$PROJECT_DIR$/src/test/java/com/jbit/test/UserTest.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/src/main/java/com/jbit/aop/Logger.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+      <favorite_root url="file://$PROJECT_DIR$/../spring代码new/代码/src/test/java/com/jbit/test/Test.java" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+    </favorites_list>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="E:\Y2\idea\mavan\RepMaven" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../mavan/apache-maven-3.6.0" />
+        <option name="userSettingsFile" value="E:\Y2\idea\mavan\apache-maven-3.6.0\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8" />
+      </MavenImportingSettings>
+    </option>
+    <option name="enabledProfiles">
+      <list>
+        <option value="jdk-1.8" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QcmSWbeWiCTwuwID7ljj8vhtoL" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring代码new/代码" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.jbit.aop" />
+      <recent name="com.jbit.dao" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.jbit.dao" />
+      <recent name="com.jbit.ref" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.Test.show1">
+    <configuration name="Test.show1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring_day01" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jbit.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jbit.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jbit.test.Test" />
+      <option name="METHOD_NAME" value="show1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.show3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring代码" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jbit.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jbit.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jbit.test.UserTest" />
+      <option name="METHOD_NAME" value="show3" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.show4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring代码" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jbit.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jbit.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jbit.test.UserTest" />
+      <option name="METHOD_NAME" value="show4" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.show5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring代码" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jbit.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jbit.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jbit.test.UserTest" />
+      <option name="METHOD_NAME" value="show5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.show6" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spring代码" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.jbit.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.jbit.test" />
+      <option name="MAIN_CLASS_NAME" value="com.jbit.test.UserTest" />
+      <option name="METHOD_NAME" value="show6" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.Test.show1" />
+        <item itemvalue="JUnit.UserTest.show6" />
+        <item itemvalue="JUnit.UserTest.show5" />
+        <item itemvalue="JUnit.UserTest.show4" />
+        <item itemvalue="JUnit.UserTest.show3" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c33bb736-5d89-49a4-8091-1dcb9e96de04" name="Default Changelist" comment="" />
+      <created>1568078258193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1568078258193</updated>
+      <workItem from="1568078272793" duration="20589000" />
+      <workItem from="1568107424827" duration="1517000" />
+      <workItem from="1568161602888" duration="24054000" />
+      <workItem from="1568199738122" duration="472000" />
+      <workItem from="1568248050560" duration="1668000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

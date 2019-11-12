@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jbit.mapper.UserMapper">
+	<!-- id相当于身份证ID，百分百不能重复Id对应的是我们接口里面的方法名 -->
+	<!-- flushInterval 缓存保留时间 单位ms(毫秒) size 最大容量 readOnly 只读 -->
+
+
+	<!-- useCache="true"即开启二级缓存 -->
+	<select id="findUserList" resultType="user" >
+		SELECT *
+		FROM smbms_user
+	</select>
+	<update id="update" parameterType="user">
+		UPDATE smbms_user SET
+		userName=#{userName} WHERE id=#{id}
+	</update>
+</mapper>

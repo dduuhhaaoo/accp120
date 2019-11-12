@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <!--struts.action.extension=action,,-->
+    <!--改变默认的常量配置-->
+<!--    <constant name="struts.i18n.encoding" value="UTF-8"></constant>-->
+<!--<constant name="struts.action.extension" value="html,php,,"></constant>-->
+    <constant name="struts.devMode" value="true"></constant>
+    <package name="default" namespace="/" extends="struts-default" strict-method-invocation="false">
+        <action name="*he*llo*" class="org.java.action.HelloAction" method="{1}{2}{3}">
+            <result name="success">success.jsp</result>
+            <result name="ok">/index.jsp</result>
+        </action>
+
+        <action name="login" class="org.java.action.LogingAction">
+            <result name="success">success.jsp</result>
+            <result name="error">error.jsp</result>
+            <!--当页面进入validate方法后默认跳转input-->
+            <result name="input">login.jsp</result>
+        </action>
+
+        <action name="hello" class="org.java.action.Hello" method="test">
+            <result name="success">success.jsp</result>
+            <result name="input">index.jsp</result>
+        </action>
+    </package>
+</struts>

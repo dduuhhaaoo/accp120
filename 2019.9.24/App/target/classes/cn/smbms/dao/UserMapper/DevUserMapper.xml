@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<!DOCTYPE mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.smbms.dao.UserMapper.DevUserMapper">
+	<!-- id相当于身份证ID，百分百不能重复Id对应的是我们接口里面的方法名 -->
+	<!-- flushInterval 缓存保留时间 单位ms(毫秒) size 最大容量 readOnly 只读 -->
+
+
+	<!-- useCache="true"即开启二级缓存 -->
+	<!--登陆-->
+	<select id="getLoginUser" resultType="User">
+		SELECT * FROM dev_user WHERE devCode=#{devCode}
+	</select>
+
+	<!--三级联动-->
+	<select id="getInfoList" resultType="AppInfo" >
+		SELECT   a.`softwareName`,a.`APKName`,a.`softwareSize`,a.`flatformId`  ,a.`categoryLevel1`,
+a.`categoryLevel2`,a.`categoryLevel3`,a.`status`,a.`downloads` ,b.`versionInfo` FROM app_info AS a
+INNER JOIN app_version AS b ON b.`id`=a.`versionId`
+<trim  suffix="  limit #{currentPageNo},#{pageSize}"  prefix="where 1=1" >
+
+<if test="softwareName=null"> and a.`softwareName` LIKE CONCAT('%',#{softwareName},'%')</if>
+ <if test="status=null"> AND a.`status`=#{status}</if>
+  <if test="flatformId=null">AND a.`flatformId` =#{flatformId}</if>
+  <if test="categoryLevel1=null">AND a.`categoryLevel1`=#{categoryLevel1}</if>
+  <if test="categoryLevel2!=null">AND a.`categoryLevel2`=#{categoryLevel2}</if>
+  <if test="categoryLevel3!=null">AND a.`categoryLevel3`=#{categoryLevel3}</if>
+
+</trim>
+	</select>
+
+	<select id="getUserCount" resultType="Integer">
+SELECT COUNT(1) AS COUNT FROM
+app_info f,app_version v WHERE f.versionId=v.id
+	</select>
+</mapper>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+	 http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+<!-- 先写一个bean 在我们spring当中 所有的豆子都是从容器获取出来的 我们只需要负责获取id:
+id:唯一的 相当于
+-->
+   <!-- <context:component-scan base-package="com.jbit"></context:component-scan>-->
+
+
+    <bean id="userDao" class="com.jbit.dao.UserDaoImpl"></bean>
+    <bean id="userDao2" class="com.jbit.dao.UserDaoImpl2"> </bean>
+    <!--依赖注入，必须是在创建对象的时候，注入-->
+    <bean id="user" class="com.jbit.pojo.User">
+        <property name="name" value="张嘎"></property>
+        <property name="say" value="三天不打鬼子，手痒痒"></property>
+    </bean>
+    <bean id="user2" class="com.jbit.pojo.User">
+        <property name="name" value="杜豪"></property>
+        <property name="say" value="我命由我不由天！"></property>
+     </bean>
+
+    <!--我们需要向打印机当中创建对象
+    我们需要先创建纸张和我们的墨盒的实现类
+    -->
+    <bean id="a4Paper" class="com.jbit.ref.A4PaperImpl"></bean>
+    <bean id="inkColor" class="com.jbit.ref.InkColorImpl"></bean>
+
+    <!--先创建打印机 value注入的是属性值 ref注入的是对象 引入的对象-->
+   <bean id="printer" class="com.jbit.ref.Printer">
+        <property name="ink" ref="inkColor"></property>
+        <property name="paper" ref="a4Paper"></property>
+    </bean>
+
+    <!--
+    这两个是我们需要创建的对象 我们把user当成了一个目标
+    把logger当成了需求使用的手术刀
+    -->
+
+    <!--面向切面aop-->
+    <bean id="useradd" class="com.jbit.pojo.User"></bean>
+    <bean id="logger" class="com.jbit.aop.Logger"></bean>
+<aop:config>
+    <!--设置切点 user下面的所有的方法都做成切点
+    execution匹配切点的方法
+    -->
+    <aop:pointcut id="mycut" expression="execution(* com.jbit.pojo.*.*(..))"></aop:pointcut>
+
+    <aop:aspect ref="logger">
+    <!--   <aop:after method="after" pointcut-ref="mycut"></aop:after>
+        <aop:before method="before" pointcut-ref="mycut"></aop:before>
+        <aop:after-returning method="returning" returning="obj" pointcut-ref="mycut"></aop:after-returning>
+     <aop:after-throwing method="throwing" throwing="e" pointcut-ref="mycut"></aop:after-throwing>
+     -->
+        <aop:around method="around" pointcut-ref="mycut"></aop:around>
+    </aop:aspect>
+</aop:config>
+</beans>
